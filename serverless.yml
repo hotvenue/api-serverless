@@ -23,12 +23,8 @@ provider:
       Resource: "arn:aws:dynamodb:eu-west-1:*:*"
 
 functions:
-  test:
-    handler: handler.test
-    events:
-      - http: get test
   api:
-    handler: handler.api
+    handler: handler.default
     events:
       - http: get api
 

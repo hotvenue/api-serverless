@@ -1,4 +1,4 @@
-export function test(event, context, callback) {
+export default function handler(event, context, callback) {
   const response = {
     statusCode: 200,
     body: JSON.stringify({
@@ -9,8 +9,4 @@ export function test(event, context, callback) {
   };
 
   callback(null, response);
-}
-
-export function api(event, context, callback) {
-  callback(new Error('Not implemented yet'));
 }
