@@ -1,11 +1,16 @@
-export function hello(event, context, callback) {
+export function test(event, context, callback) {
   const response = {
     statusCode: 200,
     body: JSON.stringify({
-      message: 'Go Serverless v1.0! Your function executed successfully!',
+      message: 'This is a test message',
+      context,
       event,
     }),
   };
 
   callback(null, response);
+}
+
+export function api(event, context, callback) {
+  callback(new Error('Not implemented yet'));
 }
